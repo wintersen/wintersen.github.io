@@ -1,56 +1,57 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <v-app-bar app color="primary" dark>
+      <v-container>
+        <v-row class="text-center" :justify="center">
+          <v-spacer></v-spacer>
+          <v-col sm="2">
+            About Me
+          </v-col>
+          <v-col sm="2">
+            My Experience
+          </v-col>
+          <v-col sm="2">
+            Contact Me
+          </v-col>
+          <v-spacer></v-spacer>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
     <v-main>
-      <Resume/>
+      <v-container class="text-center">
+        <v-row>
+          <v-col>
+            image
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            Hi, I'm Erika N Winters
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            I'm a web developer and designer
+          </v-col>
+        </v-row>
+      </v-container>
+      <About/>>
+      <Resume />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Resume from './components/Resume';
+import About from "./components/About";
+import Resume from "./components/Resume";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    Resume
+    Resume,
+    About
   },
 
   data: () => ({

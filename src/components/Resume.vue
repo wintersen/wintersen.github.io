@@ -1,7 +1,26 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
+    <v-row justify="center">
+      <v-col cols="1">
+        <v-container  class="text-center">
+          <v-row>
+            <v-col>
+              <v-btn elevation="2" fab small color="pink" @click="showDev = !showDev"><v-icon color="white">mdi-code-braces-box</v-icon></v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-btn elevation="2" fab small color="blue" @click="showDes = !showDes"><v-icon color="white">mdi-gesture</v-icon></v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-btn elevation="2" fab small color="green" @click="showProj = !showProj"><v-icon color="white">mdi-monitor-dashboard</v-icon></v-btn>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-col>
+      <v-col lg="7">
         <v-timeline dense>
           <v-timeline-item
             v-for="(item, i) in orderedResume"
@@ -24,15 +43,16 @@
                       class="pt-0"
                       v-for="(tool, t) in item.tools"
                       :key="t"
+                      sm="2"
                       >{{ tool }}</v-col
                     >
+                    <v-spacer></v-spacer>
                   </v-row>
                   <v-row>
-                    <ul v-for="(rsp, r) in item.responsibilities" :key="r">
-                      •
-                      {{
-                        rsp
-                      }}
+                    <ul>
+                      <li v-for="(rsp, r) in item.responsibilities" :key="r">
+                        {{ rsp }}
+                      </li>
                     </ul>
                   </v-row>
                 </v-container>
@@ -71,7 +91,7 @@ export default {
       {
         title: "Full-Stack Web Developer & IT",
         where: "Honors College, University of South Florida, Tampa FL",
-        start: new Date(2015, 8, 1),
+        start: new Date(2015, 8, 2),
         when: "Aug 2015 - Jan 2019",
         tools: ["C#", "ASP.NET", "JavaScript", "Bootstrap", "MsSQL"],
         responsibilities: [
@@ -81,6 +101,20 @@ export default {
         ],
         wil: "",
         type: 0,
+      },
+      {
+        title: "Graphic Designer",
+        where: "Honors College, University of South Florida, Tampa FL",
+        start: new Date(2015, 8, 1),
+        when: "Aug 2015 - Jan 2019",
+        tools: ["Adobe Suite", "Moqups"],
+        responsibilities: [
+          "Designed advertisement posters for 16 study abroad programs designed to reflect each trip's destination and study themes",
+          "Brainstormed and prototyped digital marquee to update the Honors College's main lobby",
+          "Created new Honors College LLC logo to highlight college ideologies for merchandising and college outreach",
+        ],
+        wil: "",
+        type: 1,
       },
       {
         title: "The Art of Experience",
@@ -136,6 +170,20 @@ export default {
         ],
         wil: "",
         type: 1,
+      },
+      {
+        title: "Dynamic Memory",
+        where: "Independent Study, University of South Florida, Tampa FL",
+        start: new Date(2017, 8, 1),
+        when: "Aug 2017 - Dec 2018",
+        tools: ["Unity2D", "C#"],
+        responsibilities: [
+          "Created a canban timeline to act as a guide during the development cycle",
+          "Reported bi-weekly progress updates to sponsoring professor showing completed goals, development roadblocks, next expected deliverables",
+          "Produced feature-complete point-and-click adventure game within semester time-limit",
+        ],
+        wil: "",
+        type: 2,
       },
     ],
   }),
