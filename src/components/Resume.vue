@@ -1,26 +1,27 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="1">
+      <v-col></v-col>
+      <v-col></v-col>
+      <v-col></v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" md="1">
         <v-container  class="text-center">
           <v-row>
-            <v-col>
+            <v-col md="12">
               <v-btn elevation="2" fab small color="pink" @click="showDev = !showDev"><v-icon color="white">mdi-code-braces-box</v-icon></v-btn>
             </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
+            <v-col md="12">
               <v-btn elevation="2" fab small color="blue" @click="showDes = !showDes"><v-icon color="white">mdi-gesture</v-icon></v-btn>
             </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
+            <v-col md="12">
               <v-btn elevation="2" fab small color="green" @click="showProj = !showProj"><v-icon color="white">mdi-monitor-dashboard</v-icon></v-btn>
             </v-col>
           </v-row>
         </v-container>
       </v-col>
-      <v-col lg="7">
+      <v-col cols="12" md="10" lg="7">
         <v-timeline dense>
           <v-timeline-item
             v-for="(item, i) in orderedResume"

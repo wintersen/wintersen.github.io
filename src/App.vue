@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app color="primary" dark>
       <v-container>
-        <v-row class="text-center" :justify="center">
+        <v-row class="text-center" justify="center">
           <v-spacer></v-spacer>
           <v-col sm="2">
             About Me
@@ -22,7 +22,7 @@
       <v-container class="text-center">
         <v-row>
           <v-col>
-            image
+            <Header3js />
           </v-col>
         </v-row>
         <v-row>
@@ -36,7 +36,7 @@
           </v-col>
         </v-row>
       </v-container>
-      <About/>>
+      <About/>
       <Resume />
     </v-main>
   </v-app>
@@ -45,13 +45,15 @@
 <script>
 import About from "./components/About";
 import Resume from "./components/Resume";
+import Header3js from "./components/Header3js";
 
 export default {
   name: "App",
 
   components: {
     Resume,
-    About
+    About,
+    Header3js
   },
 
   data: () => ({

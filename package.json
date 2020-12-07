@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
     "execa": "latest",
+    "three": "^0.123.0",
+    "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {

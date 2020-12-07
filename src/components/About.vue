@@ -6,20 +6,16 @@
     </v-col>
   </v-row>
   <v-row justify="center">
-    <v-col cols="12" lg="3">image</v-col>
     <v-col cols="12" lg="3">
-      <v-row>
-        <v-col cols="12">
-          Name: Erika Nicole Winters
-        </v-col>
-        <v-col  cols="12">Location: Looking to relocate!</v-col>
-        <v-col cols="12">Hobbies: </v-col>
-      </v-row>
+      <v-img src="../assets/selfportrait.png" aspect-ratio="1" max-height="500" contain></v-img>
     </v-col>
   </v-row>
-  <v-row class="text-center">
-    <v-col>
-      A little about me
+  <v-row class="text-center" justify="center">
+    <v-col cols="10" md="9" lg="7" xl="5">
+      Ever since I was a kid, I've been a stickler for detail and a creative soul. 
+      Though I chose to study computer science in university, I have passion for both technology and art equally and strive to incorporate both in my life. 
+      I like being challenged and adapting to new environments!  I also love playing games--anything can 
+      be made better if it's a bit more whimsical.
     </v-col>
   </v-row>
   <v-row  v-for="(fact, f) in facts" :key="f" justify="center">
@@ -36,7 +32,12 @@
   export default {
     name: "About",
     data: () =>({
-      facts: ["I spend a lot of time cooking food and looking for recipes from around the world","I lived abroad in Japan for a year on an island famous for flowers and onions","My favorite rpg class is mage","I love multimedia art and making decorative crafts and cards","My favorite music genres are synthpop and new wave"]
+      facts: ["I spend a lot of time cooking food and looking for recipes from around the world",
+      "I lived abroad in Japan for a year on an island famous for flowers and onions",
+      "My favorite rpg class is mage",
+      "I love multimedia art and making decorative crafts and cards",
+      "My favorite music genres are synthpop and new wave",
+      "There is always room for dessert"]
     })
   };
 </script>
