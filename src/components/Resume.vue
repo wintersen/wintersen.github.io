@@ -1,66 +1,80 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-      <v-col></v-col>
-      <v-col></v-col>
-      <v-col></v-col>
+  <v-container fluid>
+    <v-row justify="center" class="text-center text-h3  font-weight-bold mb-5">
+      <v-col> <span class="gradienttext">My Resume</span></v-col>
     </v-row>
-    <v-row justify="center">
-      <v-col cols="12" md="1">
-        <v-container  class="text-center">
-          <v-row>
-            <v-col md="12">
-              <v-btn elevation="2" fab small color="pink" @click="showDev = !showDev"><v-icon color="white">mdi-code-braces-box</v-icon></v-btn>
-            </v-col>
-            <v-col md="12">
-              <v-btn elevation="2" fab small color="blue" @click="showDes = !showDes"><v-icon color="white">mdi-gesture</v-icon></v-btn>
-            </v-col>
-            <v-col md="12">
-              <v-btn elevation="2" fab small color="green" @click="showProj = !showProj"><v-icon color="white">mdi-monitor-dashboard</v-icon></v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
+
+    <v-row class="white--text mb-5">
+      <v-col
+        cols="2"
+        class="border-rightb font-weight-medium text-right text-h5 mr-5 pr-5"
+      >
+        Education
       </v-col>
-      <v-col cols="12" md="10" lg="7">
-        <v-timeline dense>
-          <v-timeline-item
-            v-for="(item, i) in orderedResume"
-            :key="i"
-            fill-dot
-            :icon="getIcon(item.type)"
-            v-show="getDisplay(item.type)"
+      <v-col class="pb-0">
+        <v-row class="font-weight-medium">
+          <v-col class="py-0 text-h5"> Bachelor's in Computer Science</v-col>
+        </v-row>
+        <v-row class="text-h6 blue--text">
+          <v-col cols="6" class="py-0">University of South Florida</v-col>
+          <v-col class="py-0">Aug 2013 - Dec 2018</v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><p>
+              Graduated from Engineering with a GPA of 3.5, as well as completed
+              Honors College curriculum and thesis. Here I studied the
+              foundation of programming, including data structures,
+              object-oriented-programming, and algorithms. I specialized in
+              automata theory and introductory AI, as well as completed
+              independent research.
+            </p></v-col
           >
-            <v-card>
-              <v-card-title>
-                {{ item.title }}
-              </v-card-title>
-              <v-card-subtitle class="pb-0">
-                {{ item.where }} ~ {{ item.when }}
-              </v-card-subtitle>
-              <v-card-text>
-                <v-container>
-                  <v-row>
-                    <v-col
-                      class="pt-0"
-                      v-for="(tool, t) in item.tools"
-                      :key="t"
-                      sm="2"
-                      >{{ tool }}</v-col
-                    >
-                    <v-spacer></v-spacer>
-                  </v-row>
-                  <v-row>
-                    <ul>
-                      <li v-for="(rsp, r) in item.responsibilities" :key="r">
-                        {{ rsp }}
-                      </li>
-                    </ul>
-                  </v-row>
-                </v-container>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
+        </v-row>
+      </v-col>
+    </v-row>
+    <v-row><v-col></v-col></v-row>
+    <v-row class="white--text mt-5">
+      <v-col
+        cols="2"
+        class="border-rightp font-weight-medium text-right text-h5 mr-5 pr-5"
+      >
+        Experience
+      </v-col>
+      <v-col class="py-0">
+        <v-row v-for="(item, i) in orderedResume" :key="i">
+          <v-col>
+            <v-row>
+              <v-col class=" text-h5 py-0" cols="12">{{ item.title }}</v-col>
+              <v-col cols="12" class="deep-orange--text text--lighten-3 pt-0"
+                >{{ item.where }} ~ {{ item.when }}</v-col
+              >
+            </v-row>
+            <v-row>
+              <v-col
+                class="pt-0"
+                v-for="(tool, t) in item.tools"
+                :key="t"
+                sm="2"
+                ><span class="amber--text text--lighten-4">{{
+                  tool
+                }}</span></v-col
+              >
+              <v-spacer></v-spacer>
+            </v-row>
+            <v-row>
+              <v-col class="pt-0 pb-5">
+                <ul>
+                  <li v-for="(rsp, r) in item.responsibilities" :key="r">
+                    {{ rsp }}
+                  </li>
+                </ul>
+              </v-col>
+            </v-row>
+          </v-col>
+
+          
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
@@ -86,7 +100,7 @@ export default {
           "Developed mass-emailing and file management tools to streamline client communication process",
           "Performed biweekly sprints to adjust to new stakeholder needs and additional feature implementation",
         ],
-        wil: "",
+        color: "#1E88E5",
         type: 0,
       },
       {
@@ -100,7 +114,7 @@ export default {
           "Streamlined tools to help advisors process more than 7,000 student records",
           "Engaged in Scrum methodologies alongside USF’s main IT developers",
         ],
-        wil: "",
+        color: "#1E88E5",
         type: 0,
       },
       {
@@ -114,21 +128,8 @@ export default {
           "Brainstormed and prototyped digital marquee to update the Honors College's main lobby",
           "Created new Honors College LLC logo to highlight college ideologies for merchandising and college outreach",
         ],
-        wil: "",
+        color: " #fe4866",
         type: 1,
-      },
-      {
-        title: "The Art of Experience",
-        where: "Honors Thesis",
-        start: new Date(2018, 1, 1),
-        when: "Jan 2018 - Dec 2018",
-        tools: ["Vuforia", "Unity3D", "Google Cardboard", "JavaScript"],
-        responsibilities: [
-          "Designed and built an art installation using VR/AR technology to combine traditional and digital art",
-          "Demonstrated and presented installation to more than 50 attendees, answering questions on development, planning, and inspiration",
-        ],
-        wil: "",
-        type: 2,
       },
       {
         title: "Art Lead",
@@ -142,21 +143,8 @@ export default {
           "Mentored assistant artist in workflow, asset creation, and animation tools",
           "Presented at two game conferences to thousands of people and discussed development cycles and overall game design",
         ],
-        wil: "",
+        color: " #fe4866",
         type: 1,
-      },
-      {
-        title: "The Hole Moon",
-        where: "Game Jam - Brackeys Game Jam 2020.1",
-        start: new Date(2020, 2, 1),
-        when: "Feb 2020",
-        tools: ["Unity2D", "C#", "Git"],
-        responsibilities: [
-          "Placed #23 for Graphics and #157 Overall out of 723 submissions",
-          "Practiced time management skills to balance regular full-time employment and submitting the completed game by the 7 day deadline",
-        ],
-        wil: "",
-        type: 2,
       },
       {
         title: "Assistant Language Teacher",
@@ -169,21 +157,7 @@ export default {
           "Led bilingual trainings for three schools' faculties on teaching strategies and English acquirement",
           "Overcame language barriers to effectively teach a foreign language and function as part of multiple school faculties",
         ],
-        wil: "",
-        type: 1,
-      },
-      {
-        title: "Dynamic Memory",
-        where: "Independent Study, University of South Florida, Tampa FL",
-        start: new Date(2017, 8, 1),
-        when: "Aug 2017 - Dec 2018",
-        tools: ["Unity2D", "C#"],
-        responsibilities: [
-          "Created a canban timeline to act as a guide during the development cycle",
-          "Reported bi-weekly progress updates to sponsoring professor showing completed goals, development roadblocks, next expected deliverables",
-          "Produced feature-complete point-and-click adventure game within semester time-limit",
-        ],
-        wil: "",
+        color: "#FFB74D",
         type: 2,
       },
     ],
@@ -205,7 +179,7 @@ export default {
         case 1:
           return "mdi-gesture";
         case 2:
-          return "mdi-monitor-dashboard";
+          return "mdi-star";
       }
     },
     getDisplay(type) {
@@ -221,3 +195,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-card__text,
+.v-card__title {
+  word-break: normal; /* maybe !important  */
+}
+
+.border-rightb {
+  border-right: 1px solid #3addea;
+}
+
+.border-rightp {
+  border-right: 1px solid #ff6666;
+}
+</style>

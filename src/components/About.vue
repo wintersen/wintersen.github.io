@@ -1,25 +1,24 @@
 <template>
-<v-container>
+<v-container fluid>
   <v-row>
-    <v-col class="text-center">
-      Profile
+    <v-col class="text-center text-h4">
+      About Me
     </v-col>
   </v-row>
   <v-row justify="center">
-    <v-col cols="12" lg="3">
+    <v-col cols="12" md="9" lg="5">
       <v-img src="../assets/selfportrait.png" aspect-ratio="1" max-height="500" contain></v-img>
     </v-col>
   </v-row>
   <v-row class="text-center" justify="center">
-    <v-col cols="10" md="9" lg="7" xl="5">
+    <v-col cols="12" md="9" lg="7" xl="5">
       Ever since I was a kid, I've been a stickler for detail and a creative soul. 
       Though I chose to study computer science in university, I have passion for both technology and art equally and strive to incorporate both in my life. 
-      I like being challenged and adapting to new environments!  I also love playing games--anything can 
-      be made better if it's a bit more whimsical.
+      I like being challenged and adapting to new environments.  I also love playing games, especially strategy.
     </v-col>
   </v-row>
   <v-row  v-for="(fact, f) in facts" :key="f" justify="center">
-    <v-col cols="10" md="9" lg="7" xl="5">
+    <v-col cols="12" md="9" lg="7" xl="5">
       <v-card class="pa-2" tile outlined>
         {{fact}}
       </v-card>

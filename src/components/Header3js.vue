@@ -12,14 +12,15 @@ export default {
       camera: null,
       scene: null,
       renderer: null,
-      mesh: null
+      mesh: null,
+      mesh2: null
     }
   },
   methods: {
     init: function(){
 let canvas = document.getElementById('canvas');
 
-        this.camera = new Three.PerspectiveCamera(70, 1920/1080, 0.01, 10);
+        this.camera = new Three.PerspectiveCamera(70, 1920/1080, 0.1, 10);
         this.camera.position.z = 1;
 
         this.scene = new Three.Scene();
@@ -29,6 +30,15 @@ let canvas = document.getElementById('canvas');
 
         this.mesh = new Three.Mesh(geometry, material);
         this.scene.add(this.mesh);
+
+        let loader = new Three.TextureLoader();
+        let material2 = new Three.MeshNormalMaterial({
+          map: loader.load('./assets/threejs/test1.png')
+        });
+        let testgeo = new Three.PlaneGeometry(960, 540);
+        this.mesh2 = new Three.Mesh(testgeo, material2);
+        this.mesh2.position.set(0,0,.1);
+        this.scene.add(this.mesh2);
 
         this.renderer = new Three.WebGLRenderer({antialias: true});
         this.renderer.setSize(1920, 1080);
