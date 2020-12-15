@@ -197,10 +197,7 @@ export default {
 </script>
 
 <style scoped>
-.v-card__text,
-.v-card__title {
-  word-break: normal; /* maybe !important  */
-}
+
 
 .border-rightb {
   border-right: 1px solid #3addea;

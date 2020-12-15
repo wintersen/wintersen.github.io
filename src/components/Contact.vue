@@ -19,12 +19,12 @@
       <v-col>You can see me on</v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="1"
+      <v-col cols="3" sm="1"
         ><a href="https://www.linkedin.com/in/winterse/" target="__blank"
           ><v-icon color="white" x-large>mdi-linkedin</v-icon></a
         ></v-col
       >
-      <v-col cols="1"
+      <v-col cols="3" sm="1"
         ><a href="https://github.com/wintersen" target="__blank"
           ><v-icon color="white" x-large>mdi-github</v-icon></a
         ></v-col
