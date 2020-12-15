@@ -6,7 +6,7 @@
 
     <v-row class="white--text mb-5">
       <v-col
-        cols="2"
+        cols="12" md="3" lg="2"
         class="border-rightb font-weight-medium text-right text-h5 mr-5 pr-5"
       >
         Education
@@ -16,7 +16,7 @@
           <v-col class="py-0 text-h5"> Bachelor's in Computer Science</v-col>
         </v-row>
         <v-row class="text-h6 blue--text">
-          <v-col cols="6" class="py-0">University of South Florida</v-col>
+          <v-col cols="12" md="6" class="py-0">University of South Florida</v-col>
           <v-col class="py-0">Aug 2013 - Dec 2018</v-col>
         </v-row>
         <v-row>
@@ -36,7 +36,7 @@
     <v-row><v-col></v-col></v-row>
     <v-row class="white--text mt-5">
       <v-col
-        cols="2"
+        cols="12" md="3" lg="2"
         class="border-rightp font-weight-medium text-right text-h5 mr-5 pr-5"
       >
         Experience
