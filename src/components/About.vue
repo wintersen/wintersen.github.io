@@ -7,7 +7,13 @@
   </v-row>
   <v-row justify="center">
     <v-col cols="12" md="9" lg="9">
-      <v-img src="../assets/selfportrait.png" aspect-ratio="1" max-height="500" contain></v-img>
+      <v-img class="hidden-md-and-down" src="../assets/selfportrait.png" aspect-ratio="1" max-height="500" contain></v-img>
+      <v-img
+                    class="hidden-lg-and-up"
+                    height="100vh"
+                    src="../assets/selfportrait.png"
+                    max-height="500"
+                  ></v-img>
     </v-col>
   </v-row>
   <v-row class="text-center my-5" justify="center">

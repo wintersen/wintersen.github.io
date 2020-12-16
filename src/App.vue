@@ -63,14 +63,14 @@
                     src="./assets/galax.png"
                   >
                     <v-row justify="center">
-                      <v-col lg="7">
-                        <span class="text-h3 text-sm-h1 font-weight-bold"
+                      <v-col lg="7" class="pb-0">
+                        <span class="text-h4 text-sm-h1 font-weight-bold"
                           >I'm Erika N Winters</span
                         >
                       </v-col>
                     </v-row>
                     <v-row justify="center">
-                      <v-col lg="7" class="pb-5">
+                      <v-col lg="7" class="pb-5 pt-0">
                         <span
                           class="gradienttext text-h5 text-sm-h3 font-weight-medium"
                           >I'm a developer and designer</span
@@ -115,7 +115,7 @@
               </v-row>
               <v-row>
                 <v-col></v-col>
-                <v-col cols="10" md="10" lg="9" xl="8">
+                <v-col cols="12" md="10" lg="9" xl="8">
                   <v-container fluid>
                     <div id="1" style="height:25px"></div>
                     <v-row>
@@ -180,8 +180,8 @@ export default {
   background-color: black;
 }
 .bg {
-  background-image: url("./assets/bg3.jpg");
-
+  background-image: black, url("./assets/bg3.jpg");
+background-color: black;
   background-repeat: repeat-y;
 }
 .bg2 {
