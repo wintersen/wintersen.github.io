@@ -180,8 +180,8 @@ export default {
   background-color: black;
 }
 .bg {
-  background-image: black, url("./assets/bg3.jpg");
-background-color: black;
+  background-color: black;
+  background-image: url("./assets/bg3.jpg");
   background-repeat: repeat-y;
 }
 .bg2 {
