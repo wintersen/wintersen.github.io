@@ -1,5 +1,5 @@
 <template>
-  <v-app app>
+  <v-app app class="blackbg">
     <v-app-bar
       app
       inverted-scroll
@@ -177,7 +177,7 @@ export default {
 }
 
 .blackbg{
-  background-color: black;
+  background-color: black !important;
 }
 .bg {
   background-color: black;
