@@ -108,9 +108,6 @@
                     dedicate my all to, and endeavor to make it better than the
                     best.
                   </p>
-                  <p class="mt-3 text-decoration-underline">
-                    Looking to relocate!
-                  </p>
                 </v-col>
               </v-row>
               <v-row>
