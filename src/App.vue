@@ -12,16 +12,16 @@
         <v-row class="text-center" justify="center">
           <v-spacer></v-spacer>
           <v-col cols="3" sm="2">
-            <a class="anav" href="#1">Resume</a>
+            <a class="anav" href="#resume">Resume</a>
           </v-col>
           <v-col cols="3" sm="2">
-            <a class="anav" href="#4">Projects</a>
+            <a class="anav" href="#projects">Projects</a>
           </v-col>
           <v-col cols="3" sm="2">
-            <a class="anav" href="#2">About</a>
+            <a class="anav" href="#about">About</a>
           </v-col>
           <v-col cols="3" sm="2">
-            <a class="anav" href="#3">Contact</a>
+            <a class="anav" href="#contact">Contact</a>
           </v-col>
           <v-spacer></v-spacer>
         </v-row>
@@ -117,23 +117,23 @@
                 <v-col></v-col>
                 <v-col cols="12" md="10" lg="9" xl="8">
                   <v-container fluid>
-                    <div id="1" style="height:50px"></div>
+                    <div id="resume" style="height:50px"></div>
                     <v-row>
                       <v-col>
                         <Resume />
                       </v-col>
                     </v-row>
-                    <div id="4" style="height:50px"></div>
+                    <div id="projects" style="height:50px"></div>
                     <v-row>
                       <v-col>
                         <Projects />
                       </v-col>
                     </v-row>
-                    <div id="2" style="height:50px"></div>
+                    <div id="about" style="height:50px"></div>
                     <v-row>
                       <v-col><About /></v-col>
                     </v-row>
-                    <div id="3" style="height:50px"></div>
+                    <div id="contact" style="height:50px"></div>
                     <v-row>
                       <v-col><Contact /></v-col
                     ></v-row>
