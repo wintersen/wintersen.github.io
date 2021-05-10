@@ -1,5 +1,5 @@
 module.exports = {
-  "publicPath": "/wintersen.github.io/",
+  "publicPath": "/",
   "transpileDependencies": [
     "vuetify"
   ]
