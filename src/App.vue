@@ -11,13 +11,16 @@
       <v-container>
         <v-row class="text-center" justify="center">
           <v-spacer></v-spacer>
-          <v-col cols="4" sm="2">
+          <v-col cols="3" sm="2">
             <a class="anav" href="#1">Resume</a>
           </v-col>
-          <v-col cols="4" sm="2">
+          <v-col cols="3" sm="2">
+            <a class="anav" href="#4">Projects</a>
+          </v-col>
+          <v-col cols="3" sm="2">
             <a class="anav" href="#2">About</a>
           </v-col>
-          <v-col cols="4" sm="2">
+          <v-col cols="3" sm="2">
             <a class="anav" href="#3">Contact</a>
           </v-col>
           <v-spacer></v-spacer>
@@ -114,22 +117,23 @@
                 <v-col></v-col>
                 <v-col cols="12" md="10" lg="9" xl="8">
                   <v-container fluid>
-                    <div id="1" style="height:25px"></div>
+                    <div id="1" style="height:50px"></div>
                     <v-row>
                       <v-col>
                         <Resume />
                       </v-col>
                     </v-row>
+                    <div id="4" style="height:50px"></div>
                     <v-row>
                       <v-col>
                         <Projects />
                       </v-col>
                     </v-row>
-                    <div id="2" style="height:25px"></div>
+                    <div id="2" style="height:50px"></div>
                     <v-row>
                       <v-col><About /></v-col>
                     </v-row>
-                    <div id="3" style="height:25px"></div>
+                    <div id="3" style="height:50px"></div>
                     <v-row>
                       <v-col><Contact /></v-col
                     ></v-row>

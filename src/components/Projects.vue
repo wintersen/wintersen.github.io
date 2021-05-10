@@ -6,14 +6,14 @@
       </v-col>
     </v-row>
 
-    <v-row align="stretch" justify="space-around">
+    <v-row align="stretch" justify="center">
       <v-col
         v-for="(project, i) in projects"
         :key="i"
         cols="12"
         sm="8"
         md="6"
-        lg="4"
+        lg="5"
         class="px-5"
         ><v-hover v-slot:default="{ hover }">
           <v-card
@@ -61,6 +61,33 @@ export default {
   name: "Projects",
   data: () => ({
     projects: [
+      {
+        title: "Edgy Knowledge Solutions",
+        type: "Freelance Work",
+        description:
+          "Developed from the ground up a landing page for an IT consultancy agency focused on higher education, designed to be easily expanded to facilitate tech demos.  Built with React, TailwindCSS, Firestore, and Firebase.",
+        image: "eks.jpg",
+        link:
+          "https://wintersen.github.io/pokenews/",
+      },
+      {
+        title: "The Littleroot Inquirer",
+        type: "Personal Project",
+        description:
+          "A project to practice React and learn Redux.  A fake newsite centered around the Pokemon world with tagged articles and tongue-in-cheek writing.",
+        image: "tlt.jpg",
+        link:
+          "https://wintersen.github.io/pokenews/",
+      },
+      {
+        title: "Monster Crusade",
+        type: "Personal Project",
+        description:
+          "A small project to begin learning React.  Fight monsters until your frail human body can take no more! Features multiple monsters, random events, and different endings depending on how well you do.",
+        image: "mc.jpg",
+        link:
+          "https://wintersen.github.io/monstercrusade/",
+      },
       {
         title: "The Art of Experience",
         type: "Honors Thesis",
