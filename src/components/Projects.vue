@@ -68,7 +68,7 @@ export default {
           "Developed from the ground up a landing page for an IT consultancy agency focused on higher education, designed to be easily expanded to facilitate tech demos.  Built with React, TailwindCSS, Firestore, and Firebase.",
         image: "eks.jpg",
         link:
-          "https://wintersen.github.io/pokenews/",
+          "https://edgyks.com/",
       },
       {
         title: "The Littleroot Inquirer",
